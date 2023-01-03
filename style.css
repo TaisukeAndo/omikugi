@@ -1,0 +1,303 @@
+@charset "utf-8";
+
+/*----------------ローディング-----------------*/
+
+#loading-wrapper { 
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background:#dabfa1;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    transition: all 0.3s; 
+    z-index: 9999;
+}
+
+.loader {
+    color: #ffffff;
+    font-size: 20px;
+    margin: 100px auto;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    position: relative;
+    text-indent: -9999em;
+    -webkit-animation: load4 1.3s infinite linear;
+    animation: load4 1.3s infinite linear;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+@-webkit-keyframes load4 {
+    0%,
+    100% {
+      box-shadow: 0 -3em 0 0.2em, 2em -2em 0 0em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 0;
+    }
+    12.5% {
+      box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em, 3em 0 0 0, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+    }
+    25% {
+      box-shadow: 0 -3em 0 -0.5em, 2em -2em 0 0, 3em 0 0 0.2em, 2em 2em 0 0, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+    }
+    37.5% {
+      box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 0, 2em 2em 0 0.2em, 0 3em 0 0em, -2em 2em 0 -1em, -3em 0em 0 -1em, -2em -2em 0 -1em;
+    }
+    50% {
+      box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 0em, 0 3em 0 0.2em, -2em 2em 0 0, -3em 0em 0 -1em, -2em -2em 0 -1em;
+    }
+    62.5% {
+      box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 0, -2em 2em 0 0.2em, -3em 0 0 0, -2em -2em 0 -1em;
+    }
+    75% {
+      box-shadow: 0em -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0.2em, -2em -2em 0 0;
+    }
+    87.5% {
+      box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
+    }
+}
+
+@keyframes load4 {
+     0%,
+    100% {
+      box-shadow: 0 -3em 0 0.2em, 2em -2em 0 0em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 0;
+    }
+    12.5% {
+      box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em, 3em 0 0 0, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+    }
+    25% {
+      box-shadow: 0 -3em 0 -0.5em, 2em -2em 0 0, 3em 0 0 0.2em, 2em 2em 0 0, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+    }
+    37.5% {
+      box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 0, 2em 2em 0 0.2em, 0 3em 0 0em, -2em 2em 0 -1em, -3em 0em 0 -1em, -2em -2em 0 -1em;
+    }
+    50% {
+      box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 0em, 0 3em 0 0.2em, -2em 2em 0 0, -3em 0em 0 -1em, -2em -2em 0 -1em;
+    }
+    62.5% {
+      box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 0, -2em 2em 0 0.2em, -3em 0 0 0, -2em -2em 0 -1em;
+    }
+    75% {
+      box-shadow: 0em -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0.2em, -2em -2em 0 0;
+    }
+    87.5% {
+      box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
+    }
+}
+
+/*ローディング後非表示*/
+.completed {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/*----------------背景設定----------------*/
+body{
+    background-color: #dabfa1;
+}
+
+/*-------------雪を降らせる----------------*/
+.snow {
+    color: snow; /*雪の色*/
+    font-size: 18px; /*雪の大きさ*/
+    position: fixed;
+    top: -5%; /*初期位置*/
+    text-shadow:
+    5vw   -100px 2px,
+    10vw  -400px 3px,
+    20vw  -500px 4px,
+    30vw  -580px 1px,
+    39vw  -250px 2px,
+    42vw  -340px 5px,
+    56vw  -150px 2px,
+    63vw  -180px 0,
+    78vw  -220px 4px,
+    86vw  -320px 9px,
+    94vw  -170px 7px;
+    animation: anim 5s linear infinite;
+}
+
+@keyframes anim {
+    100% {
+      color: transparent;
+      top: 150%;
+    }
+}
+
+/*神社装飾*/
+.bg-svg {
+    height: 15vw;
+    background-image: url("image_2.svg");
+    background-size: 101%;
+}
+
+p{
+    margin: 6vw 0;
+}
+
+/*タイトル*/
+#Japan{
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 9vw;/*文字のサイズを幅に合わせる*/
+    font-weight:bolder;/*文字を太くする*/ 
+    margin: 50px;
+}
+
+/*-------------Button----------------*/
+
+/*ポンター未接触*/
+.btn--on,
+a.btn--on {
+  color: #fff;/*文字の色を固定*/
+  background-color: #aa705e;
+}
+
+/*ポインター接触*/
+.btn--on:hover,
+a.btn--on:hover {
+  color: #fff;/*文字の色を固定*/
+  background: rgb(196, 141, 125);
+}
+
+/*Buttonの角を落とす*/
+a.btn--radius {
+  border-radius: 100vh;
+}
+
+.off{
+    pointer-events: none;
+    color: #fff;/*文字の色を固定*/
+    background: rgb(163, 163, 163);
+}
+
+/*配置設定<PC>*/
+@media screen and (min-width: 767px) { /*ウィンドウ幅が767px以上の場合に適用*/
+
+    .push{
+        text-align: center;
+    }
+
+    .block{
+        width:16vw;
+        display: inline-block;
+        margin: 10px;
+    }
+
+    .btn,
+    a.btn,
+    button.btn {
+    font-size: 2vw;/*文字の大きさ*/
+     font-weight: 700;/*文字の太さ*/
+     padding: 1vw 4vh 1vw 4vh;/*Button内文字の配置*/
+     text-decoration: none;/*リンク下線*/
+    }
+}
+
+/*配置設定<タブレット>*/
+@media screen and (max-width: 767px) { /*ウィンドウ幅が最大767pxまでの場合に適用*/
+
+    .block{
+        display:block;
+        width:20vw;
+        margin: 5vw auto ;
+        text-align: center;
+    }
+
+    .btn,
+    a.btn,
+    button.btn {
+    font-size: 3vw;/*文字の大きさ*/
+     font-weight: 700;/*文字の太さ*/
+     padding: 2vw 5vh 2vw 5vh;/*Button内文字の配置*/
+     text-decoration: none;/*リンク下線*/
+    }
+}
+
+/*配置設定<スマホ>*/
+@media screen and (max-width: 479px) { /*ウィンドウ幅が最大479pxまでの場合に適用*/
+    .block{
+        display:block;
+        width:25vw;
+        margin: 5vw auto ;
+        text-align: center;
+    }
+
+    .btn,
+    a.btn,
+    button.btn {
+    font-size: 3vw;/*文字の大きさ*/
+     font-weight: 700;/*文字の太さ*/
+     padding: 2vw 5vh 2vw 5vh;/*Button内文字の配置*/
+     text-decoration: none;/*リンク下線*/
+    }
+}
+
+/*---------------おみくじ-----------------*/
+
+.result_no{
+    display: none;
+}
+
+.result{
+    font-size: 2.5rem;/*フォントサイズ*/
+    margin: 15vw;
+    text-align: center;
+    color:#fff;
+}
+
+.result dl{
+    width: 50vw;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.result dl dt p{
+    display: inline;
+}
+
+.star{
+    color: rgb(255, 255, 167);
+}
+
+.result dl dt{
+    font-weight: 700;
+    margin-bottom: 18px;
+    padding-bottom: 8px;
+    font-size: 1.5rem;
+    border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+.result dl dd{
+    margin: 3vw 5vh 5vw 5vh;
+    font-size: 1rem;
+}
+
+/*------------------お賽銭---------------*/
+.form_on{
+    display: none;
+}
+
+.form_off{
+    text-align: center;
+    margin: 5vw auto;
+}
+
+.form_main{
+  width:90vw;
+  height:1426px; 
+  border: none;
+  margin:0; 
+}
+
+/*------------著作権標記設定--------------*/
+.copyright{
+    bottom:0%;
+    text-align:center;
+    color:rgb(255, 255, 255);
+}
